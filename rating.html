@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueTen: How the rating works</title>
+<meta name="description" content="What TrueTen measures, how each margin of error is worked out, what the app leaves out and why, and why only tour-level swings score 10.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="./">True<b>Ten</b></a>
+  <nav><a href="./">Home</a><a href="rating.html" aria-current="page">The rating</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</div></header>
+<main><div class="wrap">
+  <div class="eyebrow">How the rating works</div>
+  <h1>A strict number, with its margin.</h1>
+  <p class="lede">TrueTen turns one video of your swing into measurements of your body's positions, scores each one
+    against tour and amateur ranges, and combines them into a rating out of 10. Every number comes with a ± so you can
+    see how much to trust it.</p>
+
+  <h2>What's measured</h2>
+  <p>Apple's body tracking finds your joints in every frame of the video, on your iPhone. The app then finds the six
+    moments of the swing from your hands (address, takeaway, top, transition, impact and finish) and measures your
+    positions at each one. Distances are in percent of your leg length, so the numbers work at any height and distance
+    from the camera.</p>
+  <div class="grid">
+    <div class="card"><h3>Face-on (one camera)</h3><p>Head and hip sway in the backswing, weight shift and head position
+      at impact, spine tilt at address and at the top, stance width, head height through the swing, finish position and
+      balance, and tempo (backswing to downswing time).</p></div>
+    <div class="card"><h3>Down the line (optional)</h3><p>Forward bend, knee flex and arm hang at address, hips moving
+      toward the ball and spine angle at impact, and the hand path in the downswing (over the top or stuck inside).</p></div>
+  </div>
+  <p class="small">The ball, the club face and the club-head path aren't measured: the club is a blur near impact. Grip,
+    ball position and alignment aren't measured either.</p>
+
+  <h2>How the margin of error is worked out</h2>
+  <p>Each measurement's ± combines four sources:</p>
+  <ul class="ticks">
+    <li><b>Tracking noise</b>, measured in your own clip: how much the joints jitter while you stand still at address,
+      and through the swing.</li>
+    <li><b>Timing</b>: how much the value would change if a moment of the swing (the top, impact) were off by a frame.
+      A higher frame rate makes this smaller, which is why the app films at 120 frames a second when the camera allows it.</li>
+    <li><b>Camera drift</b>: any movement of the phone or of a planted foot between frames.</li>
+    <li><b>The method itself</b>: a known limit for measuring each position from a flat video.</li>
+  </ul>
+  <p>The phone's margins were then calibrated on test swings where the true positions are known exactly (rendered
+    figures, filmed from different distances, heights and angles): each margin was widened until it contained the true
+    value 90% of the time. Those test swings are rendered, not real people, and real-world testing is ongoing, so the
+    margins may change as it's done.</p>
+  <p>The margin decides what counts. A position is a fault only when it's outside the range by more than its margin.
+    When it's outside but within the margin, it's too close to call and goes on a watch list instead of your plan. A
+    change between two swings counts as real only when it's bigger than both margins combined, which is how comparisons
+    and the plan's re-film checkpoints judge progress.</p>
+
+  <h2>What the app leaves out, and why</h2>
+  <p>A measurement whose margin is too wide to judge is shown greyed out, with the reason, and left out of the rating
+    instead of guessed. Some are always left out on the phone:</p>
+  <ul class="ticks">
+    <li><b>Shoulder and hip turn.</b> From one flat video, rotation reads far too small (a 94° turn read as 55° in testing),
+      so it's never judged.</li>
+    <li><b>Lead-arm straightness at the top</b> and <b>hands at impact.</b> The arm crosses the chest and the tracking
+      misplaces it.</li>
+    <li><b>Posture held through impact</b> on the phone. The hip height at impact is too erratic; standing up still shows
+      through the head rising.</li>
+  </ul>
+  <p>A swing with fewer than five measurements that can be judged gets no rating at all. A video imported from your
+    Photos is checked for framing, angle and frame rate, and its margins are widened when it's less precise than a
+    recording made in the app.</p>
+
+  <h2>Why 10 is reserved for tour-level swings</h2>
+  <p>Every measurement has two ranges: a narrow <b>tour band</b>, where tour players sit, inside a wider
+    <b>acceptable range</b>, where good amateurs sit. A measurement scores full marks only inside the tour band, loses a
+    little between the tour band and the edge of the acceptable range, and loses much more beyond it. Each score is the
+    expected score over the measurement's margin, so camera noise is neither forgiven nor punished.</p>
+  <p>Every shortfall takes away a share of the rating, in proportion to how far off it is and how much that position
+    matters, so several faults cost more than one. Two signs of the same problem (head and hip sway, for example) count
+    once in full and once at half. The rating's own ± comes from re-scoring with each measurement moved within its margin.</p>
+  <div class="card">
+    <p>On test swings built to match different levels, the scale reads roughly:</p>
+    <ul class="ticks">
+      <li>Tour model: 9.7 to 9.9</li>
+      <li>Scratch-like: 8.6 to 9.4</li>
+      <li>10-handicap-like: about 7.2</li>
+      <li>20-handicap-like: 4.4 to 5.1</li>
+      <li>Beginner-like: 1.7 to 2.7</li>
+    </ul>
+    <p class="small">These are test swings, not real golfers, and a single swing can vary. Three swings in one recording
+      give a steadier rating than one.</p>
+  </div>
+  <p>So a 6 isn't a bad mark: it's an honest one, and the app's job is to show you the one change worth the most points.</p>
+
+  <p class="small">Coaching information, not medical advice. Warm up first and stop any drill that causes pain.</p>
+</div></main>
+<footer class="site"><div class="wrap">
+  <a href="rating.html">How the rating works</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a>
+  <p>© 2026 TrueTen.</p>
+</div></footer>
+</body>
+</html>
